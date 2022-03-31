@@ -8,11 +8,9 @@ namespace BinarySearchTree
 {
     internal class BinarySearchTree
     {
-        public Node root = null;
-        public int size = 0;
+        Node root = null, temp = null;
         public void insert(int value)
         {
-            size++;
             Node newNode = new Node();
             newNode.data = value;
             newNode.left = null;
@@ -33,17 +31,11 @@ namespace BinarySearchTree
             else
                 prev.right = newNode;
         }
-        public void Display(Node root)
-        {
-            if (root == null)
-                return;
-            Display(root.left);
-            Console.WriteLine(root.data);
-            Display(root.right);
-        }
         public void display()
         {
-            Display(root);
+            Console.WriteLine(root.data);
+            Console.WriteLine(root.left.data);
+            Console.WriteLine(root.right.data);
         }
     }
 }
