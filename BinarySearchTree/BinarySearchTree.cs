@@ -9,8 +9,10 @@ namespace BinarySearchTree
     internal class BinarySearchTree
     {
         public Node root = null;
+        public int size = 0;
         public void insert(int value)
         {
+            size++;
             Node newNode = new Node();
             newNode.data = value;
             newNode.left = null;
